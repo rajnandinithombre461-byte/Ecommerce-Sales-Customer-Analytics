@@ -1,0 +1,8 @@
+Create these measures after importing the CSV into Power BI. If your table name differs, replace ecommerce_orders with your actual table name.
+
+Total Orders = DISTINCTCOUNT(ecommerce_orders[OrderID])
+Unique Customers = DISTINCTCOUNT(ecommerce_orders[CustomerID])
+Units Sold = SUM(ecommerce_orders[Quantity])
+Net Sales = SUM(ecommerce_orders[NetSales])
+Total Profit = SUM(ecommerce_orders[Profit])
+Average Order Value = DIVIDE([Net Sales], [Total Orders], 0)
